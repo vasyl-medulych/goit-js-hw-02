@@ -3,7 +3,7 @@ console.log('Задача 1. Замовлення дроїдів');
 ('use strict');
 function makeTransaction(quantity, pricePerDroid, customerCredits) {
   let totalPrice = quantity * pricePerDroid;
-  if (totalPrice <= customerCredits) {
+  if (totalPrice > customerCredits) {
     return 'Insufficient funds!';
   } else {
     return `You ordered ${quantity} droids worth ${totalPrice} credits!`;
